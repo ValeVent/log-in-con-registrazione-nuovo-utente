@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home page</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js" defer></script>
+  </head>
+  <body>
+    <h1>Accesso avvenuto con successo!</h1>
+
+    <div>
+      <button id="btnIndietro" type="submit">Torna al log-in</button>
+    </div>
+    <div>
+      <button id="btnRegistrati" type="submit">Registra nuovo utente</button>
+    </div>
+    <div>
+      <button id="btnUscita" type="submit">Chiudi Pagina</button>
+    </div>
+
+    <script>
+        //gestione dei tre bottoni
+      document.addEventListener("DOMContentLoaded", function () {
+        btnIndietro.addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+
+        btnRegistratiHomePage.addEventListener("click", function () {
+          window.location.href = "registrazione-utente.html";
+        });
+
+        btnUscita.addEventListener("click", function () {
+          window.closeWindow();
+        });
+      });
+    </script>
+  </body>
+</html>

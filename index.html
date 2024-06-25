@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Log-in</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js" defer></script>
+  </head>
+  <body>
+    <h1>Log-in</h1>
+    <form id="loginForm" method="post">
+      <div class="campo-form">
+        <label for="username">Username*</label>
+        <input type="text" id="username" name="username" required autofocus />
+      </div>
+      <div class="campo-form">
+        <label for="password">Password*</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div>
+        <button id="btn" type="submit">Accedi</button>
+      </div>
+      <div>
+        <button id="register-btn">Registrati</button>
+      </div>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inserisce gli utenti di default
+        insertDefaultUsers();
+
+        btnAccedi.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          // Recupera i valori inseriti nel form
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          // Controlla se l'utente esiste
+          if (checkCredentials(username, password)) {
+            // Reindirizza alla lista degli utenti
+            window.open("home_page.html", "_blank");
+          } else {
+            // Mostra un messaggio di errore
+            alert("login errato.");
+            svuotaCampi();
+          }
+        });
+
+        // Funzione per verificare le credenziali
+        function checkCredentials(username, password) {
+          // Recupera tutti gli utenti dal localStorage
+          const users = getUsers();
+
+          // Cerca un utente con le credenziali fornite
+          const user = users.find(
+            (user) => user.name === username && user.password === password
+          );
+
+          // Se l'utente è trovato, restituisci true, altrimenti false
+          return !!user;
+        }
+
+        //rimanda alla pagina di registrazione utente
+        btnRegistratiIndex.addEventListener("click", function () {
+          window.open("registrazione-utente.html", "_blank");
+        });
+      });
+    </script>
+  </body>
+</html>

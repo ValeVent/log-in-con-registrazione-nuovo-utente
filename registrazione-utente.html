@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Registrazione utente</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js" defer></script>
+  </head>
+  <body>
+    <!-- form -->
+    <div id="userForm" class="form">
+      <h1>Registrazione utente</h1>
+      <form id="record-form" method="post">
+        <div class="campo-form">
+          <label for="name">Name*</label>
+          <input type="text" id="name" name="name" required autofocus />
+        </div>
+        <div class="campo-form">
+          <label for="email">Email*</label>
+          <input type="text" id="email" name="email" required />
+        </div>
+        <div class="campo-form">
+          <label for="password">Password*</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div>
+          <button id="registrazione-utente" type="submit">Registrati</button>
+        </div>
+        <div>
+          <button id="btnIndietro">Torna al log-in</button>
+        </div>
+        <div>
+          <button id="btnUscita">Chiudi Pagina</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- tabella -->
+    <div class="right" id="tab1">
+      <h2 id="title">Registrazioni effettuate</h2>
+      <table id="report-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="record-list"></tbody>
+      </table>
+    </div>
+
+    <script>
+      /* Questo script regola il bottone registrazione */
+
+      document.addEventListener("DOMContentLoaded", function () {
+        registrazioneUtente.addEventListener("click", function (event) {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          const newUser = createUser(name, email, password);
+
+          alert("Utente creato");
+          updateUserList();
+        });
+      });
+
+      /* Questo script popola la tabella ogni volta che viene caricata la pagina */
+
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateUserTable() {
+          //in questa variabili assegno quello che mi ritorna il metodo listUser
+          //che sta nel file js
+          const users = listUsers();
+
+          //questa è la variabile sull'html che inizializzo vuota
+          const tableBody = document.getElementById("record-list");
+          tableBody.innerHTML = "";
+
+          //ciclo sulla variabile che ha tutti gli utenti
+          users.forEach((user) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                              <td>${user.id}</td>
+                              <td>${user.name}</td>
+                              <td>${user.email}</td>
+                              <td>${user.password}</td>
+                              <td>
+                                <button class="btn btn-danger" onclick="updateUser(${user.id})">Edit</button>
+                              </td>
+                              <td>   
+                                  <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
+                              </td>
+      
+           `; //inserisce ad ogni passaggio nel ciclo
+            //dentro la variabile html per accedere alle proprieta dell'array
+            //che hai definito si fa con il "."
+            tableBody.appendChild(row);
+          });
+        }
+
+        // Funzione per cancellare un utente
+        window.deleteUser = function (userId) {
+          const confirmation = confirm("Sicuro?");
+          if (confirmation) {
+            const userDeleted = deleteUserFromStorage(userId);
+            if (userDeleted) {
+              alert("cancellato con successo.");
+              updateUserTable();
+            } else {
+              alert("Non trovato.");
+            }
+          }
+        };
+
+        // Initialize the user table
+        updateUserTable();
+
+        // Chiamo il metod che inserisce gli utenti di default
+        updateUserTable();
+
+        // Funzione per aggiornare un utente
+        window.updateUser = function (userId) {
+          const newName = prompt("Inserisci il nuovo nome:");
+          const newEmail = prompt("Inserisci la nuova email:");
+          const newPassword = prompt("Inserisci la nuova password:");
+          if (newName) {
+            const userUpdated = updateUserInStorage(userId, {
+              name: newName,
+              email: newEmail,
+              password: newPassword,
+            });
+            if (userUpdated) {
+              alert("Aggiornato con successo.");
+              updateUserTable();
+            } else {
+              alert("Utente non trovato.");
+            }
+          }
+        };
+
+        // Aggiorna la tabella degli utenti quando la pagina viene caricata
+        window.onload = function () {
+          updateUserTable();
+        };
+      });
+
+      /* Questo script regola i due bottoni per tornare al log-in e chiudi pagina */
+      btnIndietro.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+
+      btnUscita.addEventListener("click", function () {
+        window.closeWindow();
+      });
+    </script>
+  </body>
+</html>
