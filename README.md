@@ -25,6 +25,7 @@ Username: Valentina
 
 Password: ciaociao123
 
+
 O in alternativa:
 
 Username: Maurizio
@@ -40,15 +41,15 @@ Tecnologie Utilizzate
 
 - JavaScript: Logica interattiva per:
 
- - Gestione dell'autenticazione utente.
+  - Gestione dell'autenticazione utente.
 
- - Funzionalità di registrazione e creazione di nuovi utenti.
+  - Funzionalità di registrazione e creazione di nuovi utenti.
 
- - Operazioni CRUD (Create, Read, Update, Delete) sui dati utente memorizzati in localStorage.
+  - Operazioni CRUD (Create, Read, Update, Delete) sui dati utente memorizzati in localStorage.
 
- - Navigazione tra le diverse pagine dell'applicazione.
+  - Navigazione tra le diverse pagine dell'applicazione.
 
- - Gestione dinamica della tabella degli utenti.
+  - Gestione dinamica della tabella degli utenti.
 
 - localStorage API: Utilizzata per la persistenza locale dei dati degli utenti nel browser.
 
@@ -61,11 +62,11 @@ Funzionalità Principali
 
 - Gestione Utenti (CRUD):
 
- - Visualizzazione di tutti gli utenti registrati in una tabella.
+  - Visualizzazione di tutti gli utenti registrati in una tabella.
 
- - Modifica (Edit): Possibilità di aggiornare nome, email e password di un utente esistente tramite prompt.
+  - Modifica (Edit): Possibilità di aggiornare nome, email e password di un utente esistente tramite prompt.
 
- - Cancellazione (Delete): Rimozione di un utente dalla lista con conferma.
+  - Cancellazione (Delete): Rimozione di un utente dalla lista con conferma.
 
 - Navigazione Multi-pagina: Passaggio fluido tra la pagina di login, la pagina di registrazione e la home page.
 
