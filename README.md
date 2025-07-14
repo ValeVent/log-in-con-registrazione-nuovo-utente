@@ -1,9 +1,9 @@
-Sistema di Autenticazione e Gestione Utenti
+# Sistema di Autenticazione e Gestione Utenti
 
 Questo progetto è un semplice sistema di autenticazione e gestione utenti realizzato con HTML, CSS e JavaScript puro. Offre funzionalità di login, registrazione di nuovi utenti e una rudimentale gestione dei dati (CRUD - Create, Read, Update, Delete) tramite localStorage.
 
 
-Descrizione Approfondita del Progetto
+## Descrizione Approfondita del Progetto
 
 L'applicazione si articola su tre pagine principali:
 
@@ -17,7 +17,7 @@ L'applicazione si articola su tre pagine principali:
 Il sistema memorizza i dati degli utenti nel localStorage del browser, garantendo una persistenza locale dei dati tra le sessioni. Vengono incluse credenziali predefinite per facilitare i test.
 
 
-Credenziali di Accesso Predefinite
+## Credenziali di Accesso Predefinite
 
 Per accedere rapidamente e testare le funzionalità, puoi utilizzare le seguenti credenziali di default:
 
@@ -33,7 +33,7 @@ Username: Maurizio
 Password: ciaociao123
 
 
-Tecnologie Utilizzate
+## Tecnologie Utilizzate
 
 - HTML5: Struttura di tutte e tre le pagine web (index.html, home_page.html, registrazione-utente.html).
 
@@ -54,7 +54,7 @@ Tecnologie Utilizzate
 - localStorage API: Utilizzata per la persistenza locale dei dati degli utenti nel browser.
 
 
-Funzionalità Principali
+## Funzionalità Principali
 
 - Login Utente: Verifica le credenziali inserite e reindirizza alla home page in caso di successo.
 
@@ -73,17 +73,17 @@ Funzionalità Principali
 - Persistenza Dati: I dati degli utenti registrati vengono salvati localmente tramite localStorage e persistono tra le sessioni del browser.
 
 
-Come Avviare il Progetto
+## Come Avviare il Progetto
 
 Segui questi semplici passaggi per configurare ed eseguire il progetto localmente:
 
 
-Prerequisiti
+### Prerequisiti
 
 Non sono richiesti particolari prerequisiti oltre a un browser web moderno.
 
 
-Installazione
+### Installazione
 
 1. Clona il repository (o scarica la cartella del progetto):
 
@@ -96,7 +96,7 @@ Assicurati di sostituire 'sistema-autenticazione.git' con il nome esatto del tuo
 cd sistema-autenticazione
 
 
-Avvio dell'Applicazione
+### Avvio dell'Applicazione
 
 - Apri il file index.html direttamente nel tuo browser web. È la pagina di partenza per l'applicazione.
 
@@ -109,12 +109,12 @@ http-server .
 L'applicazione sarà accessibile all'indirizzo mostrato dal server (es. http://localhost:8080).
 
 
-Stato del Progetto
+## Stato del Progetto
 
 Questo progetto è un esempio funzionale di gestione utente client-side, utile per comprendere i concetti di autenticazione base e manipolazione dei dati nel browser.
 
 
-Contatti
+## Contatti
 
 GitHub: https://github.com/ValeVent
 
