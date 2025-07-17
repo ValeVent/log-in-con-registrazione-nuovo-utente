@@ -51,7 +51,7 @@ O in alternativa:
 
   - Gestione dinamica della tabella degli utenti.
 
-- localStorage API: Utilizzata per la persistenza locale dei dati degli utenti nel browser.
+- **localStorage API**: Utilizzata per la persistenza locale dei dati degli utenti nel browser.
 
 
 ## Funzionalità Principali
