@@ -7,11 +7,11 @@ Questo progetto è un semplice sistema di autenticazione e gestione utenti reali
 
 L'applicazione si articola su tre pagine principali:
 
-- Pagina di Login (index.html): Permette agli utenti di accedere con credenziali predefinite o registrate.
+- **Pagina di Login (index.html)**: Permette agli utenti di accedere con credenziali predefinite o registrate.
 
-- Pagina di Registrazione Utente (registrazione-utente.html): Consente la creazione di nuovi account e mostra una tabella con tutti gli utenti registrati, offrendo funzionalità di modifica e cancellazione.
+- **Pagina di Registrazione Utente (registrazione-utente.html)**: Consente la creazione di nuovi account e mostra una tabella con tutti gli utenti registrati, offrendo funzionalità di modifica e cancellazione.
 
-- Home Page (home_page.html): Una pagina di benvenuto visualizzata dopo un login di successo, con opzioni per tornare al login, registrare un nuovo utente o chiudere l'applicazione.
+- **Home Page (home_page.html)**: Una pagina di benvenuto visualizzata dopo un login di successo, con opzioni per tornare al login, registrare un nuovo utente o chiudere l'applicazione.
 
 
 Il sistema memorizza i dati degli utenti nel localStorage del browser, garantendo una persistenza locale dei dati tra le sessioni. Vengono incluse credenziali predefinite per facilitare i test.
@@ -21,25 +21,25 @@ Il sistema memorizza i dati degli utenti nel localStorage del browser, garantend
 
 Per accedere rapidamente e testare le funzionalità, puoi utilizzare le seguenti credenziali di default:
 
-Username: Valentina
+- Username: Valentina
 
-Password: ciaociao123
+- Password: ciaociao123
 
 
 O in alternativa:
 
-Username: Maurizio
+- Username: Maurizio
 
-Password: ciaociao123
+- Password: ciaociao123
 
 
 ## Tecnologie Utilizzate
 
-- HTML5: Struttura di tutte e tre le pagine web (index.html, home_page.html, registrazione-utente.html).
+- **HTML5**: Struttura di tutte e tre le pagine web (index.html, home_page.html, registrazione-utente.html).
 
-- CSS3: Styling completo dell'interfaccia utente, dei form, dei pulsanti e della tabella di gestione utenti, garantendo un aspetto coerente.
+- **CSS3**: Styling completo dell'interfaccia utente, dei form, dei pulsanti e della tabella di gestione utenti, garantendo un aspetto coerente.
 
-- JavaScript: Logica interattiva per:
+- **JavaScript**: Logica interattiva per:
 
   - Gestione dell'autenticazione utente.
 
@@ -56,11 +56,11 @@ Password: ciaociao123
 
 ## Funzionalità Principali
 
-- Login Utente: Verifica le credenziali inserite e reindirizza alla home page in caso di successo.
+- **Login Utente**: Verifica le credenziali inserite e reindirizza alla home page in caso di successo.
 
-- Registrazione Nuovo Utente: Permette agli utenti di creare un nuovo account inserendo nome, email e password.
+- **Registrazione Nuovo Utente**: Permette agli utenti di creare un nuovo account inserendo nome, email e password.
 
-- Gestione Utenti (CRUD):
+- **Gestione Utenti (CRUD)**:
 
   - Visualizzazione di tutti gli utenti registrati in una tabella.
 
@@ -68,9 +68,9 @@ Password: ciaociao123
 
   - Cancellazione (Delete): Rimozione di un utente dalla lista con conferma.
 
-- Navigazione Multi-pagina: Passaggio fluido tra la pagina di login, la pagina di registrazione e la home page.
+- **Navigazione Multi-pagina**: Passaggio fluido tra la pagina di login, la pagina di registrazione e la home page.
 
-- Persistenza Dati: I dati degli utenti registrati vengono salvati localmente tramite localStorage e persistono tra le sessioni del browser.
+- **Persistenza Dati**: I dati degli utenti registrati vengono salvati localmente tramite localStorage e persistono tra le sessioni del browser.
 
 
 ## Come Avviare il Progetto
@@ -116,8 +116,8 @@ Questo progetto è un esempio funzionale di gestione utente client-side, utile p
 
 ## Contatti
 
-GitHub: https://github.com/ValeVent
+- **GitHub**: https://github.com/ValeVent
 
-LinkedIn: https://www.linkedin.com/in/valentina-venturo
+- **LinkedIn**: https://www.linkedin.com/in/valentina-venturo
 
-Sito Web: http://www.valentinaventuro.it
+- **Sito Web**: http://www.valentinaventuro.it
